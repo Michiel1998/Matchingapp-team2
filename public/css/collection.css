@@ -1,0 +1,266 @@
+
+
+
+
+
+h1 {
+  margin-bottom: 0.6em;
+
+  font-family: var(--font);
+  font-size: var(--h1-font-size);
+}
+
+h2 {
+  font-family: var(--font);
+  font-size: var(--h2-font-size);
+  font-weight: 500;
+}
+
+h3 {
+  font-family: var(--font);
+  font-size: 16px;
+
+  font-weight: 400;
+}
+
+h4 {
+  font-family: var(--font);
+  font-size: 15px;
+  font-weight: 400;
+
+  color: #B4B4B4;
+}
+
+p {
+  font-family: var(--font);
+  font-size: var(--body-font-size);
+
+  line-height: var(--body-line-height);
+}
+
+a {
+  font-family: var(--font);
+  font-size: var(--primary-button-font-size-font-size);
+
+  text-decoration: none;
+}
+
+
+header {
+  padding: 2rem;
+}
+
+header article {
+  position: relative;
+  
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+  align-items: flex-end;
+}
+
+header article h2 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+header article a {
+  position: absolute;
+
+  left: 0;
+}
+
+header article a img {
+  width: 20px;
+  height: 20px;
+}
+
+
+
+
+
+
+
+main {
+  padding-bottom: 10rem;
+}
+
+main section {
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+main section h2 {
+  padding-left: 2rem;
+}
+
+main section ul {
+  padding: 2rem;
+
+  display: flex;
+  gap: 1rem;
+
+  list-style: none;
+
+  overflow: scroll;
+  scroll-behavior: smooth;
+}
+
+
+
+/* Uitschakelen scrollbar */
+main section ul::-webkit-scrollbar {
+    display: none;
+  }
+
+  main section ul li {
+    padding: 5rem;
+
+    border-radius: 1rem;
+
+    background-color: var(--green);
+}
+
+main section ul li a {
+  background-image: unset;
+}
+
+main section ul li img {
+  width: 10rem;
+  height: 10rem;
+}
+
+
+main section button {
+  position: absolute;
+
+  width: 4em;
+  height: 4em;
+
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  border-radius: 3em;
+
+  background-color: var(--white);
+}
+
+
+main section button:first-of-type {
+  left: 1rem;
+
+  visibility: hidden;
+}
+
+main section button:first-of-type.zichtbaar {
+  visibility: unset;
+}
+
+
+
+main section button:last-of-type {
+  right: 1rem;
+}
+
+
+/* Achtergrond indicator */
+
+.scroll-tray {
+  position: absolute;
+
+  bottom: 0;
+  right: 2rem;
+
+  overflow: hidden;
+
+  height: 0.3em;
+  width: 5rem;
+
+  border-radius: 1em;
+
+  background-color: var(--grey);
+}
+
+/* Indicator */
+
+.scroll-indicator {
+  height: 0.3em;
+  position: relative;
+  width: 2rem;
+
+  border-radius: 1em;
+  background-color: var(--black);
+}
+
+
+h3 {
+  margin: 0;
+  padding-left: 2rem;
+}
+
+
+
+section:nth-of-type(2) {
+  padding: 1rem;
+
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+
+  grid-gap: 1rem;
+}
+
+
+section:nth-of-type(2) article {
+  padding: 1rem;
+
+  position: relative;
+  
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  height: 11.5rem;
+  border-radius: 1.5em;
+
+  background-color: var(--green);
+}
+
+section:nth-of-type(2) figure {
+  width: 5rem;
+  height: 5rem;
+
+  position: absolute;
+  top: 1.5rem;
+  left: calc(50% - 2.5rem);
+}
+
+section:nth-of-type(2) figure img {
+  width: 100%;
+  height: 100%;
+}
+
+section:nth-of-type(2) figcaption {
+  position: absolute;
+
+  bottom: 1rem;
+}
+
+section:nth-of-type(2) article h4 {
+  color: var(--black);
+}
+
+section:nth-of-type(2) article p {
+  font-weight: 500;
+
+  align-self: flex-start;
+
+  color: var(--black);
+}
+
