@@ -1,0 +1,81 @@
+
+.content_center_aligned {
+   height: 97.5vh;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+section {
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+
+   text-align: center;
+}
+
+section h1 {
+   margin-bottom: 0.5rem;
+
+   font-family: var(--font);
+   font-weight: 500;
+}
+
+section p {
+   font-size: 1.1rem;
+
+   color: var(--secondary-text-color);
+}
+
+form {
+   
+}
+
+form input {
+   font-family: var(--font);
+   font-weight: 500;
+
+   padding: 1rem;
+
+   border: 0.1rem solid var(--border-color);
+   border-radius: 1.25rem;
+}
+
+
+span:first-of-type {
+   margin-top: 1rem;
+
+   font-family: var(--font);
+   font-size: 0.95rem; 
+
+   font-weight: 500;
+
+   color: var(--primary-text-color);
+
+   align-self: flex-end;
+}
+
+form span:last-of-type {
+   font-family: var(--font);
+   font-weight: 400;
+
+   font-size: 0.95rem;
+
+   color: var(--primary-text-color);
+
+   margin-top: 1rem;
+
+   align-self: center;
+}
+
+form span:last-of-type a {
+   font-weight: 500;
+
+   background: linear-gradient(var(--dark-grey), var(--dark-grey)) bottom / 0 .1em no-repeat;
+
+   background-position: 100% 100%;
+   background-size: 100% 6.5%;
+   
+}
