@@ -259,6 +259,8 @@ app.post("/discover/:_id", async (req, res) => {
   const barToLike = new LikedBars(likedBar);
   barToLike.save(likedBar);
 
+
+
   // const deleteBar = await deleteOne (likedBar);
 
   // deleteBar.deletedCount(likedBar);
