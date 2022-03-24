@@ -1,0 +1,33 @@
+<header>
+  <article>
+    <h2>Barren in Amsterdam</h2>
+    <figure></figure>
+  </article>
+</header>
+
+<body>
+  <main>
+      <form action="/">
+          <button type="submit"><--</button>
+      </form>
+    <!-- Cards met barren -->
+    <% bars.forEach(bar => { %>
+    <form method="post" action="/discover/<%= bar._id %>">
+      <h1><%= bar.title %></h1>
+      <h5><%= bar.address %></h5>
+      <h5><%= bar.plusCode %></h5>
+      <a><%= bar.placeUrl %> </a>
+      <p><%= bar.website %></p>
+      <p><%= bar.phoneNumber %></p>
+      <p><%= bar.rating %></p>
+      <h2><%= bar.category %></h2>
+      <h3><%= bar.attributes %></h3>
+      <p><%= bar.currentStatus %></p>
+      <p><%= bar.reviewCount %></p>
+      <img src="<%= bar.imgUrl %> " alt="<%= bar.title %> " />
+
+      <button type="submit">❤️</button>
+    </form>
+    <% }); %>
+  </main>
+</body>

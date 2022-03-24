@@ -4,6 +4,9 @@ const flash = require("connect-flash");
 const session = require("express-session");
 const passport = require("passport");
 
+const mongoose = require("mongoose");
+const toId = mongoose.Types.ObjectId;
+
 const app = express();
 
 //Passport configuratie
@@ -13,8 +16,6 @@ require("dotenv").config();
 
 // Mongoose
 const dbURI = process.env.dbURI;
-
-const mongoose = require("mongoose");
 
 mongoose.connect(dbURI, {
   useNewUrlParser: true,
@@ -73,16 +74,23 @@ const bcrypt = require("bcryptjs");
 // Gebruikers
 const User = require("./models/gebruikers");
 
-const getUsers = async () => {
-  const users = await Bars.find();
+const getBars = async () => {
+  const bars = await Bars.find();
 
-  return users;
+  return bars;
+};
+
+const getLikedBars = async () => {
+  const likedBars = await LikedBars.find();
+
+  return likedBars;
 };
 
 // Barren en pubs
 const Bars = require("./models/bars");
-const LikedBars = require("./models/likedBars")
+const LikedBars = require("./models/likedBars");
 const { type } = require("express/lib/response");
+const { deleteOne } = require("./models/gebruikers");
 
 // Express Layouts
 app.set("layout", "./layouts/standard");
@@ -203,13 +211,13 @@ app.get("/profile", (req, res) => {
   res.render("profile", { title: "profile", layout: "./layouts/include_nav" });
 });
 
-app.get("/likes", async (req, res) => {
+app.get("/discover", async (req, res) => {
   try {
     // 1. Haal alle barren uit de database
-    getUsers().then((bars) => {
+    getBars().then((bars) => {
       // 2. Toon alle barren in de bars pagina
-      res.render("likes", {
-        title: "likes",
+      res.render("discover", {
+        title: "discover",
         bars,
         layout: "./layouts/include_nav",
       });
@@ -219,28 +227,56 @@ app.get("/likes", async (req, res) => {
   }
 });
 
-app.post("/likes", async (req, res) => {
-  // Format user data in correct format
-  let likedBar = {
-    placeUrl: req.body.placeUrl,
-    title: req.body.title,
-    rating: req.body.rating,
-    reviewCount: req.body.reviewCount,
-    category: req.body.category,
-    attributes: req.body.attributes,
-    address: req.body.address,
-    plusCode: req.body.plusCode,
-    website: req.body.website,
-    phoneNumber: req.body.phoneNumber,
-    currentStatus: req.body.currentStatus,
-    imgUrl: req.body.imgUrl,
-  };
+app.get("/likes", async (req, res) => {
+  try {
+    // 1. Haal alle barren uit de database
+    getLikedBars().then((likedBars) => {
+      // 2. Toon alle barren in de bars pagina
+      console.log(likedBars);
 
-  const data = new LikedBars(likedBar);
-  data.save(likedBar)
+      res.render("likes", {
+        title: "likes",
+        likedBars,
+        layout: "./layouts/include_nav",
+      });
+    });
+  } catch (error) {
+    console.log(error);
+  }
+});
 
-  // Load user
-  res.render("likes", { data });
+app.post("/discover/:_id", async (req, res) => {
+  // Find the ID of the liked Bar
+  console.log("REQUEST ID:", req.params._id);
+  req.params.id = toId(req.params._id);
+
+  // Find the data object of the liked Bar in bars database
+
+  const likedBar = await Bars.findById(req.params._id).lean();
+
+  // Push liked bar object to likedBar database collection
+
+  const barToLike = new LikedBars(likedBar);
+  barToLike.save(likedBar);
+
+  // const deleteBar = await deleteOne (likedBar);
+
+  // deleteBar.deletedCount(likedBar);
+
+
+  try {
+    // 1. Haal alle barren uit de database
+    getLikedBars().then((likedBars) => {
+      // 2. Toon alle barren in de bars pagina
+      res.render("likes", {
+        title: "likes",
+        likedBars,
+        layout: "./layouts/include_nav",
+      });
+    });
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 app.get("/profile_overview", (req, res) => {

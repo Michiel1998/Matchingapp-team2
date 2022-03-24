@@ -36,11 +36,11 @@ const LikedBarSchema = new mongoose.Schema ({
      },
      website: {
         type: String,
-        required: true
+        required: false
      },
      phoneNumber: {
         type: String,
-        required: true
+        required: false
      },
      currentStatus: {
         type: String,
@@ -52,6 +52,6 @@ const LikedBarSchema = new mongoose.Schema ({
      },
 })
 
-const LikedBars = mongoose.model("LikedBars", LikedBarSchema);
+const LikedBars = mongoose.model("liked-bars", LikedBarSchema);
 
 module.exports = LikedBars;

@@ -7,23 +7,23 @@
 
 <body>
   <main>
-    <!-- Cards met barren -->
-    <% bars.forEach(bar => { %>
-    <h1><%= bar.title %></h1>
-    <h5><%= bar.address %></h5>
-    <h5><%= bar.plusCode %></h5>
-    <a><%= bar.placeUrl %> </a>
-    <p><%= bar.website %></p>
-    <p><%= bar.phoneNumber %></p>
-    <p><%= bar.rating %></p>
-    <h2><%= bar.category %></h2>
-    <h3><%= bar.attributes %></h3>
-    <p><%= bar.currentStatus %></p>
-    <p><%= bar.reviewCount %></p>
-    <img src="<%= bar.imgUrl %> " alt="<%= bar.title %> " />
-    <form method="post">
-      <button type="submit">❤️</button>
+    <form action="/">
+        <button type="submit"><--</button>
     </form>
+    <!-- Cards met barren -->
+    <% likedBars.forEach(likedBar => { %>
+    <h1><%= likedBar.title %></h1>
+    <h5><%= likedBar.address %></h5>
+    <h5><%= likedBar.plusCode %></h5>
+    <a><%= likedBar.placeUrl %> </a>
+    <p><%= likedBar.website %></p>
+    <p><%= likedBar.phoneNumber %></p>
+    <p><%= likedBar.rating %></p>
+    <h2><%= likedBar.category %></h2>
+    <h3><%= likedBar.attributes %></h3>
+    <p><%= likedBar.currentStatus %></p>
+    <p><%= likedBar.reviewCount %></p>
+    <img src="<%= likedBar.imgUrl %> " alt="<%= likedBar.title %> " />
     <% }); %>
   </main>
 </body>
