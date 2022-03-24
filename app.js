@@ -254,10 +254,16 @@ app.post("/discover/:_id", async (req, res) => {
 
   const likedBar = await Bars.findById(req.params._id).lean();
 
+  
   // Push liked bar object to likedBar database collection
+  const likedBarExists = await LikedBars.findOne({ _id: req.params.id })
 
-  const barToLike = new LikedBars(likedBar);
-  barToLike.save(likedBar);
+  if(!likedBarExists)
+  {
+    console.log('test')
+    const barToLike = new LikedBars(likedBar);
+    await barToLike.save(likedBar);
+  }
 
 
 
