@@ -1,33 +1,67 @@
+
+
+
+
+<%- include('partials/header.ejs') %>
+
 <header>
-  <article>
-    <h2>Barren in Amsterdam</h2>
-    <figure></figure>
-  </article>
+
+   <article>
+      <h2> Hey, <%= name %> </h2>
+      <p> Ontdek kroegen in jouw buurt!</p>
+   </article>
+
+   <figure>
+      <img src="/images/placeholder_profile.jpg" alt="">
+   </figure>
+
 </header>
 
-<body>
-  <main>
-      <form action="/">
-          <button type="submit"><--</button>
-      </form>
-    <!-- Cards met barren -->
-    <% bars.forEach(bar => { %>
-    <form method="post" action="/discover/<%= bar._id %>">
-      <h1><%= bar.title %></h1>
-      <h5><%= bar.address %></h5>
-      <h5><%= bar.plusCode %></h5>
-      <a><%= bar.placeUrl %> </a>
-      <p><%= bar.website %></p>
-      <p><%= bar.phoneNumber %></p>
-      <p><%= bar.rating %></p>
-      <h2><%= bar.category %></h2>
-      <h3><%= bar.attributes %></h3>
-      <p><%= bar.currentStatus %></p>
-      <p><%= bar.reviewCount %></p>
-      <img src="<%= bar.imgUrl %> " alt="<%= bar.title %> " />
 
-      <button type="submit">❤️</button>
-    </form>
-    <% }); %>
-  </main>
-</body>
+
+<!-- Ontdekken -->
+<main>
+
+   <section>
+
+      <h2>Kroegen</h2>
+   
+      <% bars.forEach(bar => { %>
+
+      <form method="post" action="/discover/ <%= bar._id %>">
+           
+         <article>
+      
+            <button type="submit">❤️</button>
+      
+            <figure> 
+               <img src="<%= bar.imgUrl %>" alt="">
+            </figure>
+
+            <article>
+
+               <div class="rating">
+                  <img src="/images/rating_star.svg" alt="rating">
+                  <p><%= bar.rating %></p>
+               </div>
+
+               <h3><%= bar.title %></h3>
+               <p><%= bar.address %></p>
+
+               <h4>Openingstijden:</h4>
+               <p><%= bar.currentStatus %></p>
+               
+            </article>
+      
+         </article>
+      </form>
+
+      <% }); %>
+   
+   </section>
+   
+</main>
+
+
+   
+<%- include('partials/navigation.ejs') %>

@@ -1,29 +1,60 @@
+
+
+
+
+<%- include('partials/header.ejs') %>
+
 <header>
-  <article>
-    <h2>Barren in Amsterdam</h2>
-    <figure></figure>
-  </article>
+
+  <!--  -->
+
 </header>
 
-<body>
-  <main>
-    <form action="/">
-        <button type="submit"><--</button>
-    </form>
-    <!-- Cards met barren -->
-    <% likedBars.forEach(likedBar => { %>
-    <h1><%= likedBar.title %></h1>
-    <h5><%= likedBar.address %></h5>
-    <h5><%= likedBar.plusCode %></h5>
-    <a><%= likedBar.placeUrl %> </a>
-    <p><%= likedBar.website %></p>
-    <p><%= likedBar.phoneNumber %></p>
-    <p><%= likedBar.rating %></p>
-    <h2><%= likedBar.category %></h2>
-    <h3><%= likedBar.attributes %></h3>
-    <p><%= likedBar.currentStatus %></p>
-    <p><%= likedBar.reviewCount %></p>
-    <img src="<%= likedBar.imgUrl %> " alt="<%= likedBar.title %> " />
-    <% }); %>
-  </main>
-</body>
+
+
+<!-- Ontdekken -->
+<main>
+
+   <section>
+
+      <h2>Favorieten</h2>
+   
+      <% likedBars.forEach(likedBar => { %>
+           
+      <form>
+         <article>
+      
+            <button type="submit">❤️</button>
+      
+            <figure> 
+               <img src="<%= likedBar.imgUrl %>" alt="">
+            </figure>
+
+            <article>
+
+               <div class="rating">
+                  <img src="/images/rating_star.svg" alt="rating">
+                  <p><%= likedBar.rating %></p>
+               </div>
+
+               <h3><%= likedBar.title %></h3>
+               <p><%= likedBar.address %></p>
+
+               <h4>Openingstijden:</h4>
+               <p><%= likedBar.currentStatus %></p>
+            </article>
+      
+         </article>
+      </form> 
+
+      <% }); %>
+   
+   </section>
+   
+</main>
+
+
+   
+<%- include('partials/navigation.ejs') %>
+
+

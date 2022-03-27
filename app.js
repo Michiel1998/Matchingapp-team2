@@ -1,3 +1,5 @@
+
+
 const express = require("express");
 const expressLayouts = require("express-ejs-layouts");
 const flash = require("connect-flash");
@@ -104,6 +106,11 @@ app.get("/", ensureAuthenticated, (req, res) => {
   });
 });
 
+
+app.get("/welcome", (req, res) => {
+  res.render("welcome", { title: "welcome", layout: "./layouts/standard" });
+});
+
 app.get("/sign_up", (req, res) => {
   res.render("sign_up", { title: "sign_up", layout: "./layouts/standard" });
 });
@@ -181,7 +188,7 @@ app.post("/sign_up", (req, res) => {
 // Inloggen
 app.post("/log_in", (req, res, next) => {
   passport.authenticate("local", {
-    successRedirect: "/",
+    successRedirect: "/discover",
     failureRedirect: "/log_in",
     failureFlash: false,
   })(req, res, next);
@@ -196,15 +203,16 @@ app.get("/sign_up", (req, res) => {
 
 module.exports = router;
 
+
+
+
 app.get("/log_in", (req, res) => {
   res.render("log_in", { title: "log_in", layout: "./layouts/standard" });
 });
 
-app.get("/collection", (req, res) => {
-  res.render("collection", {
-    title: "collection",
-    layout: "./layouts/collection_detail",
-  });
+
+app.get("/cocktails", (req, res) => {
+  res.render("cocktails", { title: "cocktails", layout: "./layouts/standard" });
 });
 
 app.get("/profile", (req, res) => {
@@ -217,6 +225,7 @@ app.get("/discover", async (req, res) => {
     getBars().then((bars) => {
       // 2. Toon alle barren in de bars pagina
       res.render("discover", {
+        name: req.user.name,
         title: "discover",
         bars,
         layout: "./layouts/include_nav",
@@ -308,3 +317,4 @@ app.get("/profile_country", (req, res) => {
     layout: "./layouts/profile_forms_country",
   });
 });
+
