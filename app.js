@@ -98,10 +98,9 @@ const { deleteOne } = require("./models/gebruikers");
 app.set("layout", "./layouts/standard");
 
 // Routes
-app.get("/", ensureAuthenticated, (req, res) => {
+app.get("/", (req, res) => {
   res.render("index", {
     title: "for_you",
-    name: req.user.name,
     layout: "./layouts/include_nav",
   });
 });
@@ -228,7 +227,7 @@ app.get("/discover", async (req, res) => {
         name: req.user.name,
         title: "discover",
         bars,
-        layout: "./layouts/include_nav",
+        layout: "./layouts/discover_layout",
       });
     });
   } catch (error) {
@@ -246,7 +245,7 @@ app.get("/likes", async (req, res) => {
       res.render("likes", {
         title: "likes",
         likedBars,
-        layout: "./layouts/include_nav",
+        layout: "./layouts/discover_layout",
       });
     });
   } catch (error) {
@@ -254,7 +253,7 @@ app.get("/likes", async (req, res) => {
   }
 });
 
-app.post("/discover/:_id", async (req, res) => {
+app.post("/discover/:_id",  async (req, res) => {
   // Find the ID of the liked Bar
   console.log("REQUEST ID:", req.params._id);
   req.params.id = toId(req.params._id);
@@ -288,7 +287,7 @@ app.post("/discover/:_id", async (req, res) => {
       res.render("likes", {
         title: "likes",
         likedBars,
-        layout: "./layouts/include_nav",
+        layout: "./layouts/discover_layout",
       });
     });
   } catch (error) {

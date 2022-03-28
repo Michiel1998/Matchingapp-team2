@@ -110,6 +110,10 @@ main section article button {
 
    top: 0.5rem;
    right: 0.5rem;
+
+   outline: none;
+   border: none;
+   background: none;
 }
 
 /* Thumbnail kroeg */

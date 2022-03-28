@@ -28,11 +28,11 @@
    
       <% bars.forEach(bar => { %>
 
-      <form method="post" action="/discover/ <%= bar._id %>">
+      <form method="post" action="/discover/<%= bar._id %>">
            
          <article>
       
-            <button type="submit">❤️</button>
+            <button type="submit"><img src="/images/filled_heart.svg" alt="like"></button>
       
             <figure> 
                <img src="<%= bar.imgUrl %>" alt="">

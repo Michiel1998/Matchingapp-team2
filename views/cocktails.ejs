@@ -28,17 +28,27 @@
             <img src="" alt="">
          </figure>
 
+
+         <label><b>Favoriete drankje</b></label>
+      
+   
+
+
          <article>
-            <h3>Dark 'N Stormy</h3>
+            <h3 class="randomCocktail">Dark 'N Stormy</h3>
             <h4>Donkere rum - ginger beer - limoen</h4>
          </article>
 
       </article>
       
-      <button>Generate Cocktail!</button>
+      <button class="generateCocktail" type="button" onclick="getRandomCocktail()">Random</button>
 
    </section>
 
 </main>
 
+<script src="js/cocktails.js"></script>
+
 <%- include('partials/navigation.ejs') %> 
+
+
