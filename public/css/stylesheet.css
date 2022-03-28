@@ -18,29 +18,40 @@ body {
     --black: #000000;
     --white: #ffffff;
 
-    --grey: #f1f0f5;
-    --dark-grey: #b4b4b4;
+    --grey: #707070;
 
-    --green: #C5FC31;
+
+
+    --yellow: #00000;
+
+    --beer-foam: #FFF3D6;
+
+    --beer-light: #FFDD8D;
+    
+    --beer-secondary: #ECAA0F;
+    --beer: #ECA90C;
+
+    --brown: #00000;
+
 
 
     --font: Poppins;
 
-    --h1-font-size: 36px;
-    --h2-font-size: 24px;
-
     --primary-text-color: #262626;
+
+    --body-text-color: #644900;
+
     --secondary-text-color: #acacac;
 
     --body-font-size: 16px;
 
-    --body-line-height: 1.6;
-
     --primary-button-font-size: 16px;
+
+    --primary-button-color: #644900;
 
     --input-border-color: grey;
 
-    --border-color: #DBDBDB;
+    --border-color: #644900;
 }
 
 
@@ -49,54 +60,32 @@ body {
 
 
 h1 {
-    padding: 0;
-    margin: 0;
-
     font-family: var(--font);
-    font-size: var(--h1-font-size);
+    font-size: 64px;
+
+    text-transform: uppercase;
 }
 
 h2 {
-    padding: 0;
-    margin: 0;
-
     font-family: var(--font);
-    font-size: var(--h2-font-size);
+
+    font-weight: 400;
 }
 
 h3 {
     font-family: var(--font);
-    font-size: 16px;
-
-    color: var(--dark-grey);
 }
 
 h4 {
-    padding: 0;
-    margin: 0;
-
     font-family: var(--font);
 }
 
 p {
-    padding: 0;
-    margin: 0;
-
-
     font-family: var(--font);
     font-size: var(--body-font-size);
-
-    line-height: var(--body-line-height);
 }
 
 a {
-    padding: 0;
-    margin: 0;
-
-    font-family: var(--font);
-    font-size: var(--primary-button-font-size-font-size);
-
-    text-decoration: none;
 }
 
 figure {
@@ -116,8 +105,47 @@ img {
 
 
 
-/* Primary nav */
 
+.secondary_header {
+    z-index: 99;
+
+    width: 100%;
+    height: 6rem;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.secondary_header article {
+    z-index: 99;
+}
+
+.secondary_header h1 {
+    padding: 0;
+    margin: 0;
+
+    margin-top: -0.5rem;
+
+    font-size: 33px;
+}
+
+.secondary_header p {
+    padding: 0;
+    margin: 0;
+
+    font-size: 8.8px;
+}
+
+.secondary_header img {
+    position: absolute;
+
+    top: 0;
+}
+
+/* Primary nav */
 nav {
     position: fixed;
 
@@ -125,11 +153,10 @@ nav {
     left: 0;
     bottom: 0;
 
-    height: 6rem;
+    height: 5rem;
 
-    border-radius: 1.5rem 1.5rem 0 0;
-
-    background-color: var(--black);
+    border-top: 0.1rem solid var(--grey);
+    background-color: var(--white);
 }
 
 nav ul {
@@ -144,181 +171,54 @@ nav ul {
 
     justify-content: space-around;
     align-items: center;
-}
-
-
-
-form {
-    position: relative;
-
-    padding: 4rem 1.5rem 0 1.5rem;
-
-    display: flex;
-    flex-direction: column;
-}
-
-form input {
-    margin-top: 1rem;
-
-    width: auto;
-    height: 4rem;
-
-
-}
-
-form input:first-of-type {
-    margin-top: 0;
-}
-
-
-input[type=submit] {
-    font-size: 0.95rem;
-    font-weight: 400;
-    margin-top: 10rem;
-
-    border: none;
     
-    color: var(--white);
-    background-color: var(--black);
-}
-
-
-form span a {
-    color: var(--black);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-ul {
-    padding: 0;
-    margin: 0;
-
     list-style: none;
 }
 
-li {
+nav ul li a {
     padding: 0;
     margin: 0;
-}
-
-.ontdekken {
-    padding: 1rem;
-}
-
-.ontdekken header {
-    padding: 1rem;
-}
-
-.ontdekken header nav ul {
-
-    display: flex;
-    flex-direction: row;
-
-    justify-content: space-between;
-}
-
-
-
-
-.ontdekken section article {
-    position: relative;
-
-    padding: 20rem 0 15rem 0;
-
-    border-radius: 1rem;
-    background-color: var(--dark-grey);
-}
-
-.ontdekken section article figure {
-    position: absolute;
-
-    right: 1rem;
-    left: 1rem;
-    bottom: 1rem;
-
-}
-
-.ontdekken section article figure figcaption {
-    padding: 1.5rem;
 
     display: flex;
     flex-direction: column;
 
+    justify-content: center;
     align-items: center;
 
-    border-radius: 1rem;
-    background-color: var(--white);
+    gap: 0.25rem;
+
+    font-family: var(--font);
+    font-size: 0.75rem;
+
+    text-decoration: none;
+
+    color: var(--body-text-color);
 }
 
-.ontdekken section article figure figcaption h4 {
+nav ul li a img {
+    padding: 0;
+    margin: 0;
 
-    max-width: 10em;
-
-    text-align: center;
-
-    font-weight: 200;
-}
-
-.ontdekken section article figure figcaption h4:first-of-type {
-    color: var(--dark-grey);
-    margin-bottom: 1rem;
+    width: 2rem;
+    height: 2rem;
 }
 
 
-.ontdekken main > article {
-    padding-top: 7.5rem;
-
+form {
     display: flex;
-    flex-direction: row;
-
-    justify-content: center;
-
-    gap: 5rem;
+    flex-direction: column;
 }
 
-.ontdekken main > article button {
-
-    width: 4rem;
-    height: 4rem;
-
-    border: var(--dark-grey) 1px solid;
-    border-radius: 100%;
 
 
 
-    background-color: transparent;
-}
+
+
+
+
+
+
+
 
 
 

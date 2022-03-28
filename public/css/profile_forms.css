@@ -96,6 +96,8 @@ main section {
 }
 
 main section figure {
+    overflow: hidden;
+
     margin: 2rem 0 2rem 0;
     padding: 0;
 
@@ -104,12 +106,17 @@ main section figure {
 
 
     border-radius: 1rem;
-    background-color: var(--green);
 }
 
 main section figure img {
     margin: 0;
     padding: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: 50% 50%;
 }
 
 main section article {

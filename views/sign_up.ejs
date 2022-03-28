@@ -2,41 +2,44 @@
 
 
 
+<%- include('partials/header.ejs') %>
+
+
 <div class="content_center_aligned">
 
-
-
-
    <section>
+     
       <!-- Introductie -->
-      <h1>Registreren</h1>
+      <h2>Registreren</h2>
 
-      <p>
-          Vul onderstaande velden in om <br>
-          een account aan te maken.
-      </p>
+      <!-- Formulier -->
+      <form action="" method="POST">
+
+         <label for="username">Gebruikersnaam</label>
+         <input type="text" name="username" id="username" placeholder="" required />
+
+         <label for="email">Email</label>
+         <input type="email" name="email" id="email" placeholder="" required />
+
+         <label for="password">Wachtwoord</label>
+         <input type="password" name="password" id="password" placeholder="" required />
+
+         <label for="repeat_password">Herhaal wachtwoord</label>
+         <input type="password" name="repeat_password" id="repeat_password" placeholder="" required />
+
+         <label for="residence">Woonplaats</label>
+         <select name="residence" id="countries">
+
+            </select>
+
+         <input type="submit" value="Registreren"/>
+
+         <span>Heb je al een account? <a href="log_in">Log in</a></span>
+
+      </form>
+
    </section>
 
-   <!-- Formuleir -->
-   <form action="" method="POST">
-
-        <label for="username"></label>
-        <input type="text" name="username" id="username" placeholder="Gebruikersnaam" required />
-
-        <label for="email"></label>
-        <input type="email" name="email" id="email" placeholder="Email" required />
-
-        <label for="password"></label>
-        <input type="password" name="password" id="password" placeholder="Wachtwoord" required />
-
-        <label for="repeat_password"></label>
-        <input type="password" name="repeat_password" id="repeat_password" placeholder="Herhaal wachtwoord" required />
-
-
-        <input type="submit" value="Maak een account aan"/>
-
-        <span>Heb je al een account? <a href="log_in">Log in</a></span>
-
-   </form>
-
 </div>
+
+<script src="js/residence.js"></script>
