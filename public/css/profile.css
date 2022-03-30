@@ -5,66 +5,14 @@
 
 
 body {
-    padding: 0;
-    margin: 0;
+    background-color: var(--beer-light);
 }
 
 
 
 
 
-:root {
 
-    --black: #000000;
-    --white: #ffffff;
-
-    --grey: #f1f0f5;
-    --dark-grey: #b4b4b4;
-
-    --green: #C5FC31;
-
-
-    --font: Poppins;
-
-    --h1-font-size: 36px;
-    --h2-font-size: 24px;
-
-    --primary-text-color: #262626;
-
-    --body-font-size: 16px;
-
-    --body-line-height: 1.6;
-
-    --primary-button-font-size: 16px;
-
-    --input-border-color: grey;
-
-    --border-color: #DBDBDB;
-}
-
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-
-
-h1 {
-    padding: 0;
-    margin: 0;
-
-    margin-bottom: 0.6em;
-
-    font-family: var(--font);
-    font-size: var(--h1-font-size);
-}
-
-h2 {
-    padding: 0;
-    margin: 0;
-
-    font-family: var(--font);
-    font-size: var(--h2-font-size);
-    font-weight: 500;
-}
 
 h3 {
     padding: 0;
@@ -75,7 +23,7 @@ h3 {
 
     font-weight: 400;
 
-    color: var(--dark-grey);
+    color: var(--body-text-color);
 }
 
 h4 {
@@ -86,7 +34,7 @@ h4 {
     font-size: 15px;
     font-weight: 400;
 
-    color: #B4B4B4;
+    color: var(--beer);
 }
 
 p {
@@ -126,6 +74,15 @@ header article {
     align-items: center;
 }
 
+header article h2 {
+    padding: 0;
+    margin: 0;
+    
+    font-family: var(--font);
+    font-size: 1.9rem;
+    font-weight: 400;
+}
+
 header article figure {
     overflow: hidden;
 
@@ -152,16 +109,15 @@ main section {
     align-items: center;
 }
 
-main section h3 {
-    color: var(--primary-text-color);
-}
-
 main section h4 {
     margin-bottom: 2rem;
 
     align-self: flex-start;
 }
 
+main section h3 {
+    color: var(--body-text-color);
+}
 
 
 
@@ -188,7 +144,7 @@ main section article {
     
     width: 100%;
 
-    border-bottom: 0.1rem solid var(--border-color);
+    border-bottom: 0.1rem solid var(--beer);
 }
 
 main section article a {
@@ -201,14 +157,9 @@ main section article a {
 
 }
 
-main section article img {
-    width: 1rem;
-    height: 15px;
-}
-
 
 main section article h3 {
-    font-size: 18px;
+    font-size: 1.2rem;
 }
 
 
@@ -221,8 +172,6 @@ main section select {
 }
 
 
-main {
-}
 
 
 form {
@@ -246,7 +195,6 @@ form input {
     font-family: var(--font);
 
     border: none;
-    border-bottom: 1px solid red;
 }
 
 form input[type=submit] {
