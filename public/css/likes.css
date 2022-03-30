@@ -3,7 +3,6 @@
 
 
 /* Algemeen */
-
 html {
    height: 100%;
 }
@@ -13,13 +12,11 @@ body {
 }
 
 
-
 .secondary_header {
    position: fixed;
 }
 
 /* Header */
-
 header {
    padding: 8rem 2rem;
    padding-bottom: 0;
@@ -53,13 +50,10 @@ header figure {
 
 
 
-
+/* Main */
 main {
    padding: 2rem;
 }
-
-
-
 
 
 main section {
@@ -80,6 +74,7 @@ main section h2 {
    color: var(--body-text-color);
 }
 
+/* Kroeg kaarten */
 main section form > article {
    position: relative;
 
