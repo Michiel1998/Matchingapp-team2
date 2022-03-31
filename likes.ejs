@@ -1,0 +1,60 @@
+
+
+
+
+<%- include('partials/header.ejs') %>
+
+<header>
+
+  <!--  -->
+
+</header>
+
+
+
+<!-- Ontdekken -->
+<main>
+
+   <section>
+
+      <h2>Favorieten</h2>
+   
+      <% likedBars.forEach(likedBar => { %>
+           
+      <form method="post" action="/discover/<%= likedBar._id %>">
+         <article>
+      
+            <button type="submit">❤️</button>
+      
+            <figure> 
+               <img src="<%= likedBar.imgUrl %>" alt="">
+            </figure>
+
+            <article>
+
+               <div class="rating">
+                  <img src="/images/rating_star.svg" alt="rating">
+                  <p><%= likedBar.rating %></p>
+               </div>
+
+               <h3><%= likedBar.title %></h3>
+               <p><%= likedBar.address %></p>
+
+               <h4>Openingstijden:</h4>
+               <p><%= likedBar.currentStatus %></p>
+            </article>
+      
+         </article>
+      </form> 
+
+      <% }); %>
+   
+   </section>
+   
+</main>
+
+
+   
+<%- include('partials/navigation.ejs') %>
+
+

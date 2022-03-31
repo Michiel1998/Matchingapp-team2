@@ -271,6 +271,9 @@ app.post("/discover/:_id",  async (req, res) => {
     console.log('test')
     const barToLike = new LikedBars(likedBar);
     await barToLike.save(likedBar);
+  } else {
+    console.log("bjhhkjh")
+    LikedBars.deleteOne({ _id: req.params.id });
   }
 
 
