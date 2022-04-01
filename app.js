@@ -224,7 +224,7 @@ app.get("/discover", async (req, res) => {
     getBars().then((bars) => {
       // 2. Toon alle barren in de bars pagina
       res.render("discover", {
-        name: req.user.name,
+        name: req?.user?.name || 'unknown',
         title: "discover",
         bars,
         layout: "./layouts/discover_layout",
@@ -259,10 +259,8 @@ app.post("/discover/:_id",  async (req, res) => {
   req.params.id = toId(req.params._id);
 
   // Find the data object of the liked Bar in bars database
-
   const likedBar = await Bars.findById(req.params._id).lean();
 
-  
   // Push liked bar object to likedBar database collection
   const likedBarExists = await LikedBars.findOne({ _id: req.params.id })
 
@@ -271,6 +269,9 @@ app.post("/discover/:_id",  async (req, res) => {
     console.log('test')
     const barToLike = new LikedBars(likedBar);
     await barToLike.save(likedBar);
+  } else {
+    console.log("bjhhkjh")
+    LikedBars.deleteOne({ _id: req.params.id });
   }
 
 
@@ -295,6 +296,37 @@ app.post("/discover/:_id",  async (req, res) => {
   }
 });
 
+app.post("/favorites/delete",  async (req, res) => {
+  console.log('hey hij doet het tot hier')
+  let test = toId(req.body.barID);
+
+  console.log(req.body)
+
+  // database actie zodat bar uit favorieten gaat
+ const result = await LikedBars.deleteOne({ _id: test }); 
+ console.log(result)
+
+  // database actie om de nieuwe lijst met favorieten
+  try {
+    console.log('dfsjkl')
+    // 1. Haal alle barren uit de database
+    getLikedBars().then((likedBars) => {
+      // 2. Toon alle barren in de bars pagina
+      res.render("likes", {
+        title: "likes",
+        likedBars,
+        layout: "./layouts/discover_layout",
+      });
+    });
+  } catch (error) {
+    console.log(error);
+  }
+  // render favorieten
+
+})
+
+
+  
 app.get("/profile_overview", (req, res) => {
   res.render("profile_overview", {
     title: "profile_overview",
