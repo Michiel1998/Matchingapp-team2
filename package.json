@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "nodemon app.js",
     "dev": "nodemon app.js",
     "watch": "nodemon --ext *"
   },
@@ -15,6 +15,7 @@
     "connect-flash": "^0.1.1",
     "dotenv": "^16.0.0",
     "ejs": "^3.1.6",
+    "ejs-layouts": "^0.0.1",
     "express": "^4.17.3",
     "express-ejs-layouts": "^2.5.1",
     "express-session": "^1.17.2",
@@ -25,6 +26,8 @@
     "passport-local": "^1.0.0"
   },
   "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
     "nodemon": "^2.0.15"
   }
 }

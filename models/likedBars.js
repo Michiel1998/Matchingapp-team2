@@ -1,7 +1,7 @@
 
 const mongoose = require("mongoose");
 
-const LikedBarSchema = new mongoose.Schema ({
+const LikedBarSchema = new mongoose.Schema({
    placeUrl: {
       type: String,
       required: true

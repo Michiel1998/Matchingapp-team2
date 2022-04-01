@@ -118,9 +118,31 @@ app.post("/sign_up", (req, res) => {
   const { username, email, password, password_2 } = req.body;
   let errors = [];
 
+  //    if(!username || !email || !password || !password_2 ) {
+  //        errors.push({ msg: "Please fill in all fields" });
+  //    }
+
+  //    if(password !== password_2 ) {
+  //        errors.push({ msg: "Passwords do not match" });
+  //    }
+
+  //    if(password.length < 6 ) {
+  //        errors.push({ msg: "Password should be at least 6 characters " });
+  //    }
+
+  //    if(errors.length > 0) {
+  //        res.render("sign_up", {
+
+  //        });
+
+  //    } else {
+  //        res.send("pass");
+  //    }
+
   User.findOne({ email }, (err, user) => {
     if (user) {
       console.log("email in gebruik");
+      // errors.push({ msg: "Email is al gerigistreerd" });
       res.render("sign_up", {
         title: "sign_up",
         layout: "./layouts/profile_forms_country",
@@ -147,10 +169,11 @@ app.post("/sign_up", (req, res) => {
           //Wachtwoord daadwerkelijk aanmaken
           nieuwe_gebruiker.password = hash;
 
-          //Gebruiker opslaan
+          //gebruiker opslaan
           nieuwe_gebruiker
             .save()
             .then((user) => {
+              // req.flash("success_msg", "You are now registered and can log in");
               res.redirect("/log_in");
               console.log("nieuwe gebruiker aangemaakt");
             })
@@ -201,7 +224,7 @@ app.get("/discover", async (req, res) => {
     getBars().then((bars) => {
       // 2. Toon alle barren in de bars pagina
       res.render("discover", {
-        name: req.user.name,
+        name: req?.user?.name || 'unknown',
         title: "discover",
         bars,
         layout: "./layouts/discover_layout",
@@ -236,10 +259,8 @@ app.post("/discover/:_id",  async (req, res) => {
   req.params.id = toId(req.params._id);
 
   // Find the data object of the liked Bar in bars database
-
   const likedBar = await Bars.findById(req.params._id).lean();
 
-  
   // Push liked bar object to likedBar database collection
   const likedBarExists = await LikedBars.findOne({ _id: req.params.id })
 
@@ -248,7 +269,16 @@ app.post("/discover/:_id",  async (req, res) => {
     console.log('test')
     const barToLike = new LikedBars(likedBar);
     await barToLike.save(likedBar);
+  } else {
+    console.log("bjhhkjh")
+    LikedBars.deleteOne({ _id: req.params.id });
   }
+
+
+
+  // const deleteBar = await deleteOne (likedBar);
+
+  // deleteBar.deletedCount(likedBar);
 
 
   try {
@@ -266,6 +296,37 @@ app.post("/discover/:_id",  async (req, res) => {
   }
 });
 
+app.post("/favorites/delete",  async (req, res) => {
+  console.log('hey hij doet het tot hier')
+  let test = toId(req.body.barID);
+
+  console.log(req.body)
+
+  // database actie zodat bar uit favorieten gaat
+ const result = await LikedBars.deleteOne({ _id: test }); 
+ console.log(result)
+
+  // database actie om de nieuwe lijst met favorieten
+  try {
+    console.log('dfsjkl')
+    // 1. Haal alle barren uit de database
+    getLikedBars().then((likedBars) => {
+      // 2. Toon alle barren in de bars pagina
+      res.render("likes", {
+        title: "likes",
+        likedBars,
+        layout: "./layouts/discover_layout",
+      });
+    });
+  } catch (error) {
+    console.log(error);
+  }
+  // render favorieten
+
+})
+
+
+  
 app.get("/profile_overview", (req, res) => {
   res.render("profile_overview", {
     title: "profile_overview",
