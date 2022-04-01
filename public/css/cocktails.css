@@ -69,6 +69,8 @@ main section:nth-of-type(2) > article {
 }
 
 main section:nth-of-type(2) article figure {
+   overflow: hidden;
+
    position: relative;
 
    width: 100%;
@@ -82,8 +84,14 @@ main section:nth-of-type(2) article figure {
 main section:nth-of-type(2) article figure img {
    padding: 0;
    margin: 0;
-
+   
    position: absolute;
+
+   width: 100%;
+   height: 100%;
+
+   object-fit: fill;
+   object-position: 50% 50%;
 }
 
 main section:nth-of-type(2) article article {

@@ -91,6 +91,7 @@ main section h2 {
    color: var(--body-text-color);
 }
 
+/* Kaarten kroeg */
 main section form > article {
    position: relative;
 
@@ -133,6 +134,8 @@ main section article figure img {
 
    object-fit: cover;
    object-position: 50% 50%;
+
+   
 }
 
 /* Informatie kroeg */
