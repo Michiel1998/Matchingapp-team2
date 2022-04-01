@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
-    "deploy": "nodemon app.js",
+    "dev": "nodemon app.js",
     "watch": "nodemon --ext *"
   },
   "author": "Danian Marengo",
