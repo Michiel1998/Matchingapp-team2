@@ -1,0 +1,1348 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, p, a {
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: 64px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+p {
+  font-size: 16px;
+}
+
+figure,
+figcaption,
+img {
+  padding: 0;
+  margin: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Primary nav */
+nav {
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 5rem;
+  border-top: 0.1rem solid #b4b4b4;
+  background-color: #ffffff;
+}
+nav ul {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+nav ul a {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.75rem;
+  text-decoration: none;
+  color: #644900;
+}
+nav ul a img {
+  padding: 0;
+  margin: 0;
+  width: 2rem;
+  height: 2rem;
+}
+
+.secondary_header {
+  z-index: 99;
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+}
+.secondary_header article {
+  z-index: 99;
+}
+.secondary_header h1 {
+  padding: 0;
+  margin: 0;
+  margin-top: -0.5rem;
+  font-size: 33px;
+}
+.secondary_header p {
+  padding: 0;
+  margin: 0;
+  font-size: 8.8px;
+}
+.secondary_header img {
+  position: absolute;
+  top: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #FFDD8D;
+}
+
+.logInWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.logInWrapper .logIn {
+  padding: 4rem 1.5rem 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.logInWrapper .logIn h2 {
+  margin-bottom: 2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #644900;
+}
+.logInWrapper .logIn form {
+  /* Wachtwoord vergeten */
+  /* Nog geen account */
+}
+.logInWrapper .logIn form label {
+  padding: 0;
+  margin: 1rem 0 0.5rem 0;
+  font-family: "Poppins", sans-serif;
+  color: #644900;
+}
+.logInWrapper .logIn form input[type=email],
+.logInWrapper .logIn form input[type=password],
+.logInWrapper .logIn form input[type=text] {
+  height: 2.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  border: 0.15rem solid #644900;
+  border-radius: 0.5rem;
+  color: #644900;
+  background-color: #FFF3D6;
+}
+.logInWrapper .logIn form input[type=submit] {
+  font-size: 1rem;
+  padding: 1rem 4rem;
+  margin-top: 8rem;
+  align-self: center;
+  border: none;
+  border-radius: 0.5rem;
+  color: #ffffff;
+  background-color: #644900;
+}
+.logInWrapper .logIn form span {
+  margin-top: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.95rem;
+  color: #644900;
+}
+.logInWrapper .logIn form span:first-of-type {
+  font-weight: 500;
+  align-self: flex-end;
+}
+.logInWrapper .logIn form span:last-of-type {
+  font-weight: 400;
+  align-self: center;
+  /* Nog geen account link */
+}
+.logInWrapper .logIn form span:last-of-type a {
+  font-weight: 500;
+  color: #644900;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #FFDD8D;
+}
+
+.signUpWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.signUpWrapper .signUp {
+  padding: 4rem 1.5rem 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.signUpWrapper .signUp h2 {
+  margin-bottom: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #644900;
+}
+.signUpWrapper .signUp form {
+  /* Wachtwoord vergeten */
+  /* Nog geen account */
+}
+.signUpWrapper .signUp form label {
+  padding: 0;
+  margin: 1rem 0 0.5rem 0;
+  font-family: "Poppins", sans-serif;
+  color: #644900;
+}
+.signUpWrapper .signUp form input[type=email],
+.signUpWrapper .signUp form input[type=password],
+.signUpWrapper .signUp form input[type=text] {
+  height: 2.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  border: 0.15rem solid #644900;
+  border-radius: 0.5rem;
+  color: #644900;
+  background-color: #FFF3D6;
+}
+.signUpWrapper .signUp form input:nth-of-type(2),
+.signUpWrapper .signUp form input:nth-of-type(4) {
+  margin-bottom: 2rem;
+}
+.signUpWrapper .signUp form select {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: 2.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  border: 0.15rem solid #644900;
+  border-radius: 0.5rem;
+  background-color: #FFF3D6;
+  background-image: url("../images/select_arrow_down.svg");
+  background-position: calc(100% - 1.5rem) 0.8rem;
+  background-size: 1rem;
+  background-repeat: no-repeat;
+}
+.signUpWrapper .signUp form input[type=submit] {
+  font-size: 1rem;
+  padding: 1rem 4rem;
+  margin-top: 2rem;
+  align-self: center;
+  border: none;
+  border-radius: 0.5rem;
+  color: #ffffff;
+  background-color: #644900;
+}
+.signUpWrapper .signUp form span {
+  margin-top: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.95rem;
+  color: #644900;
+}
+.signUpWrapper .signUp form span:first-of-type {
+  font-weight: 500;
+  align-self: flex-end;
+}
+.signUpWrapper .signUp form span:last-of-type {
+  font-weight: 400;
+  align-self: center;
+  /* Nog geen account link */
+}
+.signUpWrapper .signUp form span:last-of-type a {
+  font-weight: 500;
+  color: #644900;
+}
+
+/* Algemeen */
+html {
+  height: 100%;
+}
+
+.bodyStandard {
+  background-color: #FFDD8D;
+}
+
+/* Header */
+.welkomTekst {
+  padding: 8rem 2rem;
+  padding-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.welkomTekst h2 {
+  padding: 0;
+  margin: 0 0 0.5rem 0;
+  color: #644900;
+}
+.welkomTekst p {
+  padding: 0;
+  margin: 0;
+  color: #644900;
+}
+.welkomTekst figure {
+  overflow: hidden;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1em;
+}
+.welkomTekst figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.mainDiscover {
+  padding: 2rem;
+}
+.mainDiscover section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.mainDiscover section h2 {
+  padding: 0;
+  margin: 0;
+  font-size: 1.9rem;
+  text-align: center;
+  color: #644900;
+}
+.mainDiscover section form > article {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 27rem;
+  border: 0.1rem solid #644900;
+  border-radius: 0.75rem;
+  background-color: #ECA90C;
+  /* Thumbnail kroeg */
+  /* Informatie kroeg */
+}
+.mainDiscover section form > article button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  outline: none;
+  border: none;
+  background: none;
+}
+.mainDiscover section form > article figure {
+  overflow: hidden;
+  width: 100%;
+  height: 15rem;
+  border-bottom: 0.1rem solid #644900;
+  border-radius: 0 0 0.75rem 0.75rem;
+}
+.mainDiscover section form > article figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+.mainDiscover section form > article article {
+  padding: 1rem;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.mainDiscover section form > article article .rating {
+  position: absolute;
+  top: 1.2rem;
+  right: 1rem;
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  gap: 0.5rem;
+}
+.mainDiscover section form > article article .rating p {
+  font-weight: 600;
+}
+.mainDiscover section form > article article h3 {
+  padding: 0;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #ffffff;
+}
+.mainDiscover section form > article article h4 {
+  padding: 0;
+  margin: 1rem 0 0.5rem 0;
+  font-weight: 300;
+  color: #ffffff;
+}
+.mainDiscover section form > article article p {
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+  color: #644900;
+}
+.mainDiscover section form > article article > p {
+  font-size: 0.85rem;
+}
+.mainDiscover section form > article article > p:last-of-type {
+  color: #ffffff;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(#ffffff, 50%, #ECA90C);
+}
+
+.zeroStateWrapper {
+  padding: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+}
+.zeroStateWrapper .zeroState {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+.zeroStateWrapper .zeroState h1, .zeroStateWrapper .zeroState p {
+  padding: 0;
+  margin: 0;
+}
+.zeroStateWrapper img {
+  width: 16rem;
+  height: 16rem;
+}
+.zeroStateWrapper a {
+  padding: 1rem 5rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  color: #ffffff;
+  background-color: #644900;
+}
+
+/* Algemeen */
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #FFDD8D;
+}
+
+.secondary_header {
+  position: fixed;
+}
+
+/* Header */
+.welkomTekst {
+  padding: 8rem 2rem;
+  padding-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.welkomTekst article h2 {
+  padding: 0;
+  margin: 0 0 0.5rem 0;
+}
+.welkomTekst article p {
+  padding: 0;
+  margin: 0;
+}
+.welkomTekst figure {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1em;
+  background-color: #707070;
+}
+
+.mainLikes {
+  padding: 2rem;
+}
+.mainLikes section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.mainLikes section h2 {
+  padding: 0;
+  margin: 0;
+  font-size: 1.9rem;
+  text-align: center;
+  color: #644900;
+}
+.mainLikes section form > article {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 27rem;
+  border: 0.1rem solid #644900;
+  border-radius: 0.75rem;
+  background-color: #ECA90C;
+  /* Thumbnail kroeg */
+  /* Informatie kroeg */
+}
+.mainLikes section form > article button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+.mainLikes section form > article figure {
+  overflow: hidden;
+  width: 100%;
+  height: 15rem;
+  border-bottom: 0.1rem solid #644900;
+  border-radius: 0 0 0.75rem 0.75rem;
+}
+.mainLikes section form > article figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+.mainLikes section form > article > article {
+  padding: 1rem;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.mainLikes section form > article > article .rating {
+  position: absolute;
+  top: 1.2rem;
+  right: 1rem;
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  gap: 0.5rem;
+}
+.mainLikes section form > article > article .rating p {
+  font-weight: 600;
+}
+.mainLikes section form > article > article h3 {
+  padding: 0;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #ffffff;
+}
+.mainLikes section form > article > article h4 {
+  padding: 0;
+  margin: 1rem 0 0.5rem 0;
+  font-weight: 300;
+  color: #ffffff;
+}
+.mainLikes section form > article > article p {
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+  color: #644900;
+}
+.mainLikes section form > article > article > p {
+  font-size: 0.85rem;
+}
+.mainLikes section form > article > article > p:last-of-type {
+  color: #ffffff;
+}
+
+html {
+  height: 100%;
+}
+
+.bodyStandard {
+  background-color: #FFDD8D;
+}
+
+.mainCocktails {
+  padding: 1rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  /* Opener */
+  /* Kaart cocktail */
+}
+.mainCocktails section:nth-of-type(1) {
+  display: flex;
+  flex-direction: column;
+  color: #644900;
+  text-align: center;
+}
+.mainCocktails section:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.mainCocktails section:nth-of-type(2) article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 22rem;
+  border: 0.1rem solid #644900;
+  border-radius: 0.75rem;
+  color: #ffffff;
+  background-color: #ECAA0F;
+}
+.mainCocktails section:nth-of-type(2) article figure {
+  position: relative;
+  width: 100%;
+  height: 15rem;
+  border-radius: 0 0 0.75rem 0.75rem;
+  background-color: #b4b4b4;
+}
+.mainCocktails section:nth-of-type(2) article figure img {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+}
+.mainCocktails section:nth-of-type(2) article article {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.mainCocktails section:nth-of-type(2) article article h3 {
+  padding: 0;
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.mainCocktails section:nth-of-type(2) article article h4 {
+  padding: 0;
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 300;
+}
+.mainCocktails section:nth-of-type(2) button {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  outline: none;
+  color: #ffffff;
+  background-color: #644900;
+}
+
+.profile h1, .profile h2, .profile h3, .profile h4, .profile p, .profile a,
+.mainProfile h1,
+.mainProfile h2,
+.mainProfile h3,
+.mainProfile h4,
+.mainProfile p,
+.mainProfile a {
+  font-family: "Poppins", sans-serif;
+}
+.profile h1,
+.mainProfile h1 {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 0.6em;
+  font-size: 36px;
+}
+.profile h2,
+.mainProfile h2 {
+  padding: 0;
+  margin: 0;
+  font-size: 24px;
+  font-weight: 500;
+}
+.profile h3,
+.mainProfile h3 {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #707070;
+}
+.profile h4,
+.mainProfile h4 {
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
+  color: #b4b4b4;
+}
+.profile p,
+.mainProfile p {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.profile a,
+.mainProfile a {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  text-decoration: none;
+}
+.profile .profile,
+.mainProfile .profile {
+  padding: 2rem;
+}
+.profile .profile article,
+.mainProfile .profile article {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.profile .profile article figure,
+.mainProfile .profile article figure {
+  overflow: hidden;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1em;
+}
+.profile .profile article figure img,
+.mainProfile .profile article figure img {
+  width: 100%;
+  height: 100%;
+}
+.profile .mainProfile section,
+.mainProfile .mainProfile section {
+  margin: 0;
+  padding: 0 2rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.profile .mainProfile section h3,
+.mainProfile .mainProfile section h3 {
+  color: #262626;
+}
+.profile .mainProfile section h4,
+.mainProfile .mainProfile section h4 {
+  margin-bottom: 2rem;
+  align-self: flex-start;
+}
+.profile .mainProfile section figure,
+.mainProfile .mainProfile section figure {
+  margin: 2rem 0 2rem 0;
+  padding: 0;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 1rem;
+}
+.profile .mainProfile section figure img,
+.mainProfile .mainProfile section figure img {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.profile .mainProfile section article,
+.mainProfile .mainProfile section article {
+  margin-bottom: 1.5rem;
+  width: 100%;
+  border-bottom: 0.1rem solid #644900;
+}
+.profile .mainProfile section article a,
+.mainProfile .mainProfile section article a {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.profile .mainProfile section article img,
+.mainProfile .mainProfile section article img {
+  width: 1rem;
+  height: 15px;
+}
+.profile .mainProfile section article h3,
+.mainProfile .mainProfile section article h3 {
+  font-size: 18px;
+}
+.profile .mainProfile section select,
+.mainProfile .mainProfile section select {
+  width: 100%;
+}
+.profile .mainProfile form,
+.mainProfile .mainProfile form {
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.profile .mainProfile form label,
+.mainProfile .mainProfile form label {
+  margin-top: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+.profile .mainProfile form input,
+.mainProfile .mainProfile form input {
+  padding: 1rem 0 1rem 0;
+  margin-bottom: 1rem;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  border-bottom: 1px solid red;
+}
+.profile .mainProfile form input[type=submit],
+.mainProfile .mainProfile form input[type=submit] {
+  margin-top: 20rem;
+  padding: 1.5rem;
+  border: none;
+  border-radius: 0.75rem;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.profilePassword h1, .profilePassword h2, .profilePassword h3, .profilePassword h4, .profilePassword p, .profilePassword a,
+.profileCountry h1,
+.profileCountry h2,
+.profileCountry h3,
+.profileCountry h4,
+.profileCountry p,
+.profileCountry a,
+.profileOverview h1,
+.profileOverview h2,
+.profileOverview h3,
+.profileOverview h4,
+.profileOverview p,
+.profileOverview a,
+.mainPassword h1,
+.mainPassword h2,
+.mainPassword h3,
+.mainPassword h4,
+.mainPassword p,
+.mainPassword a,
+.mainOverview h1,
+.mainOverview h2,
+.mainOverview h3,
+.mainOverview h4,
+.mainOverview p,
+.mainOverview a,
+.mainCountry h1,
+.mainCountry h2,
+.mainCountry h3,
+.mainCountry h4,
+.mainCountry p,
+.mainCountry a {
+  font-family: "Poppins", sans-serif;
+}
+.profilePassword h1,
+.profileCountry h1,
+.profileOverview h1,
+.mainPassword h1,
+.mainOverview h1,
+.mainCountry h1 {
+  margin-bottom: 0.6em;
+  font-size: 36px;
+}
+.profilePassword h2,
+.profileCountry h2,
+.profileOverview h2,
+.mainPassword h2,
+.mainOverview h2,
+.mainCountry h2 {
+  font-size: 24px;
+  font-weight: 500;
+}
+.profilePassword h3,
+.profileCountry h3,
+.profileOverview h3,
+.mainPassword h3,
+.mainOverview h3,
+.mainCountry h3 {
+  font-size: 16px;
+  font-weight: 400;
+}
+.profilePassword h4,
+.profileCountry h4,
+.profileOverview h4,
+.mainPassword h4,
+.mainOverview h4,
+.mainCountry h4 {
+  font-size: 15px;
+  font-weight: 400;
+  color: #B4B4B4;
+}
+.profilePassword p,
+.profileCountry p,
+.profileOverview p,
+.mainPassword p,
+.mainOverview p,
+.mainCountry p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+.profilePassword a,
+.profileCountry a,
+.profileOverview a,
+.mainPassword a,
+.mainOverview a,
+.mainCountry a {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  text-decoration: none;
+}
+.profilePassword .profilePassword,
+.profilePassword .profileCountry,
+.profilePassword .profileOverview,
+.profileCountry .profilePassword,
+.profileCountry .profileCountry,
+.profileCountry .profileOverview,
+.profileOverview .profilePassword,
+.profileOverview .profileCountry,
+.profileOverview .profileOverview,
+.mainPassword .profilePassword,
+.mainPassword .profileCountry,
+.mainPassword .profileOverview,
+.mainOverview .profilePassword,
+.mainOverview .profileCountry,
+.mainOverview .profileOverview,
+.mainCountry .profilePassword,
+.mainCountry .profileCountry,
+.mainCountry .profileOverview {
+  padding: 2rem;
+}
+.profilePassword .profilePassword article,
+.profilePassword .profileCountry article,
+.profilePassword .profileOverview article,
+.profileCountry .profilePassword article,
+.profileCountry .profileCountry article,
+.profileCountry .profileOverview article,
+.profileOverview .profilePassword article,
+.profileOverview .profileCountry article,
+.profileOverview .profileOverview article,
+.mainPassword .profilePassword article,
+.mainPassword .profileCountry article,
+.mainPassword .profileOverview article,
+.mainOverview .profilePassword article,
+.mainOverview .profileCountry article,
+.mainOverview .profileOverview article,
+.mainCountry .profilePassword article,
+.mainCountry .profileCountry article,
+.mainCountry .profileOverview article {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+.profilePassword .profilePassword article h2,
+.profilePassword .profileCountry article h2,
+.profilePassword .profileOverview article h2,
+.profileCountry .profilePassword article h2,
+.profileCountry .profileCountry article h2,
+.profileCountry .profileOverview article h2,
+.profileOverview .profilePassword article h2,
+.profileOverview .profileCountry article h2,
+.profileOverview .profileOverview article h2,
+.mainPassword .profilePassword article h2,
+.mainPassword .profileCountry article h2,
+.mainPassword .profileOverview article h2,
+.mainOverview .profilePassword article h2,
+.mainOverview .profileCountry article h2,
+.mainOverview .profileOverview article h2,
+.mainCountry .profilePassword article h2,
+.mainCountry .profileCountry article h2,
+.mainCountry .profileOverview article h2 {
+  font-size: 20px;
+  font-weight: 400;
+}
+.profilePassword .profilePassword article a,
+.profilePassword .profileCountry article a,
+.profilePassword .profileOverview article a,
+.profileCountry .profilePassword article a,
+.profileCountry .profileCountry article a,
+.profileCountry .profileOverview article a,
+.profileOverview .profilePassword article a,
+.profileOverview .profileCountry article a,
+.profileOverview .profileOverview article a,
+.mainPassword .profilePassword article a,
+.mainPassword .profileCountry article a,
+.mainPassword .profileOverview article a,
+.mainOverview .profilePassword article a,
+.mainOverview .profileCountry article a,
+.mainOverview .profileOverview article a,
+.mainCountry .profilePassword article a,
+.mainCountry .profileCountry article a,
+.mainCountry .profileOverview article a {
+  position: absolute;
+  left: 0;
+}
+.profilePassword .profilePassword article a img,
+.profilePassword .profileCountry article a img,
+.profilePassword .profileOverview article a img,
+.profileCountry .profilePassword article a img,
+.profileCountry .profileCountry article a img,
+.profileCountry .profileOverview article a img,
+.profileOverview .profilePassword article a img,
+.profileOverview .profileCountry article a img,
+.profileOverview .profileOverview article a img,
+.mainPassword .profilePassword article a img,
+.mainPassword .profileCountry article a img,
+.mainPassword .profileOverview article a img,
+.mainOverview .profilePassword article a img,
+.mainOverview .profileCountry article a img,
+.mainOverview .profileOverview article a img,
+.mainCountry .profilePassword article a img,
+.mainCountry .profileCountry article a img,
+.mainCountry .profileOverview article a img {
+  width: 20px;
+  height: 20px;
+}
+.profilePassword .mainPassword section,
+.profilePassword .mainOverview section,
+.profilePassword .mainCountry section,
+.profileCountry .mainPassword section,
+.profileCountry .mainOverview section,
+.profileCountry .mainCountry section,
+.profileOverview .mainPassword section,
+.profileOverview .mainOverview section,
+.profileOverview .mainCountry section,
+.mainPassword .mainPassword section,
+.mainPassword .mainOverview section,
+.mainPassword .mainCountry section,
+.mainOverview .mainPassword section,
+.mainOverview .mainOverview section,
+.mainOverview .mainCountry section,
+.mainCountry .mainPassword section,
+.mainCountry .mainOverview section,
+.mainCountry .mainCountry section {
+  margin: 0;
+  padding: 0 2rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.profilePassword .mainPassword section figure,
+.profilePassword .mainOverview section figure,
+.profilePassword .mainCountry section figure,
+.profileCountry .mainPassword section figure,
+.profileCountry .mainOverview section figure,
+.profileCountry .mainCountry section figure,
+.profileOverview .mainPassword section figure,
+.profileOverview .mainOverview section figure,
+.profileOverview .mainCountry section figure,
+.mainPassword .mainPassword section figure,
+.mainPassword .mainOverview section figure,
+.mainPassword .mainCountry section figure,
+.mainOverview .mainPassword section figure,
+.mainOverview .mainOverview section figure,
+.mainOverview .mainCountry section figure,
+.mainCountry .mainPassword section figure,
+.mainCountry .mainOverview section figure,
+.mainCountry .mainCountry section figure {
+  overflow: hidden;
+  margin: 2rem 0 2rem 0;
+  padding: 0;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 1rem;
+}
+.profilePassword .mainPassword section figure img,
+.profilePassword .mainOverview section figure img,
+.profilePassword .mainCountry section figure img,
+.profileCountry .mainPassword section figure img,
+.profileCountry .mainOverview section figure img,
+.profileCountry .mainCountry section figure img,
+.profileOverview .mainPassword section figure img,
+.profileOverview .mainOverview section figure img,
+.profileOverview .mainCountry section figure img,
+.mainPassword .mainPassword section figure img,
+.mainPassword .mainOverview section figure img,
+.mainPassword .mainCountry section figure img,
+.mainOverview .mainPassword section figure img,
+.mainOverview .mainOverview section figure img,
+.mainOverview .mainCountry section figure img,
+.mainCountry .mainPassword section figure img,
+.mainCountry .mainOverview section figure img,
+.mainCountry .mainCountry section figure img {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+.profilePassword .mainPassword section article,
+.profilePassword .mainOverview section article,
+.profilePassword .mainCountry section article,
+.profileCountry .mainPassword section article,
+.profileCountry .mainOverview section article,
+.profileCountry .mainCountry section article,
+.profileOverview .mainPassword section article,
+.profileOverview .mainOverview section article,
+.profileOverview .mainCountry section article,
+.mainPassword .mainPassword section article,
+.mainPassword .mainOverview section article,
+.mainPassword .mainCountry section article,
+.mainOverview .mainPassword section article,
+.mainOverview .mainOverview section article,
+.mainOverview .mainCountry section article,
+.mainCountry .mainPassword section article,
+.mainCountry .mainOverview section article,
+.mainCountry .mainCountry section article {
+  margin-bottom: 1rem;
+  width: 100%;
+  border-bottom: 0.1rem solid #DBDBDB;
+}
+.profilePassword .mainPassword section article a,
+.profilePassword .mainOverview section article a,
+.profilePassword .mainCountry section article a,
+.profileCountry .mainPassword section article a,
+.profileCountry .mainOverview section article a,
+.profileCountry .mainCountry section article a,
+.profileOverview .mainPassword section article a,
+.profileOverview .mainOverview section article a,
+.profileOverview .mainCountry section article a,
+.mainPassword .mainPassword section article a,
+.mainPassword .mainOverview section article a,
+.mainPassword .mainCountry section article a,
+.mainOverview .mainPassword section article a,
+.mainOverview .mainOverview section article a,
+.mainOverview .mainCountry section article a,
+.mainCountry .mainPassword section article a,
+.mainCountry .mainOverview section article a,
+.mainCountry .mainCountry section article a {
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.profilePassword .mainPassword section article img,
+.profilePassword .mainOverview section article img,
+.profilePassword .mainCountry section article img,
+.profileCountry .mainPassword section article img,
+.profileCountry .mainOverview section article img,
+.profileCountry .mainCountry section article img,
+.profileOverview .mainPassword section article img,
+.profileOverview .mainOverview section article img,
+.profileOverview .mainCountry section article img,
+.mainPassword .mainPassword section article img,
+.mainPassword .mainOverview section article img,
+.mainPassword .mainCountry section article img,
+.mainOverview .mainPassword section article img,
+.mainOverview .mainOverview section article img,
+.mainOverview .mainCountry section article img,
+.mainCountry .mainPassword section article img,
+.mainCountry .mainOverview section article img,
+.mainCountry .mainCountry section article img {
+  margin-top: 0.2rem;
+  width: 1rem;
+  height: 15px;
+}
+.profilePassword .mainPassword section article h3,
+.profilePassword .mainOverview section article h3,
+.profilePassword .mainCountry section article h3,
+.profileCountry .mainPassword section article h3,
+.profileCountry .mainOverview section article h3,
+.profileCountry .mainCountry section article h3,
+.profileOverview .mainPassword section article h3,
+.profileOverview .mainOverview section article h3,
+.profileOverview .mainCountry section article h3,
+.mainPassword .mainPassword section article h3,
+.mainPassword .mainOverview section article h3,
+.mainPassword .mainCountry section article h3,
+.mainOverview .mainPassword section article h3,
+.mainOverview .mainOverview section article h3,
+.mainOverview .mainCountry section article h3,
+.mainCountry .mainPassword section article h3,
+.mainCountry .mainOverview section article h3,
+.mainCountry .mainCountry section article h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #262626;
+}
+.profilePassword .mainPassword section article p,
+.profilePassword .mainOverview section article p,
+.profilePassword .mainCountry section article p,
+.profileCountry .mainPassword section article p,
+.profileCountry .mainOverview section article p,
+.profileCountry .mainCountry section article p,
+.profileOverview .mainPassword section article p,
+.profileOverview .mainOverview section article p,
+.profileOverview .mainCountry section article p,
+.mainPassword .mainPassword section article p,
+.mainPassword .mainOverview section article p,
+.mainPassword .mainCountry section article p,
+.mainOverview .mainPassword section article p,
+.mainOverview .mainOverview section article p,
+.mainOverview .mainCountry section article p,
+.mainCountry .mainPassword section article p,
+.mainCountry .mainOverview section article p,
+.mainCountry .mainCountry section article p {
+  font-size: 14px;
+  color: #6F6F6F;
+  margin-bottom: 0.5rem;
+}
+.profilePassword .mainPassword section select,
+.profilePassword .mainOverview section select,
+.profilePassword .mainCountry section select,
+.profileCountry .mainPassword section select,
+.profileCountry .mainOverview section select,
+.profileCountry .mainCountry section select,
+.profileOverview .mainPassword section select,
+.profileOverview .mainOverview section select,
+.profileOverview .mainCountry section select,
+.mainPassword .mainPassword section select,
+.mainPassword .mainOverview section select,
+.mainPassword .mainCountry section select,
+.mainOverview .mainPassword section select,
+.mainOverview .mainOverview section select,
+.mainOverview .mainCountry section select,
+.mainCountry .mainPassword section select,
+.mainCountry .mainOverview section select,
+.mainCountry .mainCountry section select {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: inline-block;
+  font: inherit;
+  line-height: 1.5em;
+  padding: 0.5em 3.5em 0.5em 1em;
+  width: 100%;
+  width: 100%;
+  outline: none;
+  border: #DBDBDB 1px solid;
+  border-radius: 15px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  color: #262626;
+  background-color: transparent;
+  background-image: url("../images/arrow_down.svg");
+  background-position: calc(100% - 20px) calc(1em + 2px);
+  background-size: 12.5px;
+  background-repeat: no-repeat;
+}
+.profilePassword .mainPassword section form,
+.profilePassword .mainOverview section form,
+.profilePassword .mainCountry section form,
+.profileCountry .mainPassword section form,
+.profileCountry .mainOverview section form,
+.profileCountry .mainCountry section form,
+.profileOverview .mainPassword section form,
+.profileOverview .mainOverview section form,
+.profileOverview .mainCountry section form,
+.mainPassword .mainPassword section form,
+.mainPassword .mainOverview section form,
+.mainPassword .mainCountry section form,
+.mainOverview .mainPassword section form,
+.mainOverview .mainOverview section form,
+.mainOverview .mainCountry section form,
+.mainCountry .mainPassword section form,
+.mainCountry .mainOverview section form,
+.mainCountry .mainCountry section form {
+  margin: 0;
+  padding: 2rem;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+}
+.profilePassword .mainPassword section form label,
+.profilePassword .mainOverview section form label,
+.profilePassword .mainCountry section form label,
+.profileCountry .mainPassword section form label,
+.profileCountry .mainOverview section form label,
+.profileCountry .mainCountry section form label,
+.profileOverview .mainPassword section form label,
+.profileOverview .mainOverview section form label,
+.profileOverview .mainCountry section form label,
+.mainPassword .mainPassword section form label,
+.mainPassword .mainOverview section form label,
+.mainPassword .mainCountry section form label,
+.mainOverview .mainPassword section form label,
+.mainOverview .mainOverview section form label,
+.mainOverview .mainCountry section form label,
+.mainCountry .mainPassword section form label,
+.mainCountry .mainOverview section form label,
+.mainCountry .mainCountry section form label {
+  margin: 1rem 0 1rem 0;
+  font-family: "Poppins", sans-serif;
+}
+.profilePassword .mainPassword section form input,
+.profilePassword .mainOverview section form input,
+.profilePassword .mainCountry section form input,
+.profileCountry .mainPassword section form input,
+.profileCountry .mainOverview section form input,
+.profileCountry .mainCountry section form input,
+.profileOverview .mainPassword section form input,
+.profileOverview .mainOverview section form input,
+.profileOverview .mainCountry section form input,
+.mainPassword .mainPassword section form input,
+.mainPassword .mainOverview section form input,
+.mainPassword .mainCountry section form input,
+.mainOverview .mainPassword section form input,
+.mainOverview .mainOverview section form input,
+.mainOverview .mainCountry section form input,
+.mainCountry .mainPassword section form input,
+.mainCountry .mainOverview section form input,
+.mainCountry .mainCountry section form input {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 1rem;
+  height: auto;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  border-bottom: 0.1rem solid #DBDBDB;
+}
+.profilePassword .mainPassword section form input[type=submit],
+.profilePassword .mainOverview section form input[type=submit],
+.profilePassword .mainCountry section form input[type=submit],
+.profileCountry .mainPassword section form input[type=submit],
+.profileCountry .mainOverview section form input[type=submit],
+.profileCountry .mainCountry section form input[type=submit],
+.profileOverview .mainPassword section form input[type=submit],
+.profileOverview .mainOverview section form input[type=submit],
+.profileOverview .mainCountry section form input[type=submit],
+.mainPassword .mainPassword section form input[type=submit],
+.mainPassword .mainOverview section form input[type=submit],
+.mainPassword .mainCountry section form input[type=submit],
+.mainOverview .mainPassword section form input[type=submit],
+.mainOverview .mainOverview section form input[type=submit],
+.mainOverview .mainCountry section form input[type=submit],
+.mainCountry .mainPassword section form input[type=submit],
+.mainCountry .mainOverview section form input[type=submit],
+.mainCountry .mainCountry section form input[type=submit] {
+  margin-top: 45vh;
+  padding: 1.5rem;
+  border: none;
+  border-radius: 0.75rem;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+/*# sourceMappingURL=main.css.map */

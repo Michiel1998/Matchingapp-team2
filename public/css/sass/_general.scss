@@ -1,0 +1,40 @@
+@import "variables";
+
+*, 
+*::after, 
+*::before {
+    box-sizing:border-box;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, p, a {
+    font-family: $font;
+}
+
+
+h1 {
+    font-size: 64px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-weight: 400;
+}
+
+
+p {
+    font-size: $body-font-size;
+}
+
+figure,
+figcaption,
+img {
+    padding: 0;
+    margin: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column; 
+}

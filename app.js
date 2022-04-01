@@ -224,7 +224,7 @@ app.get("/discover", async (req, res) => {
     getBars().then((bars) => {
       // 2. Toon alle barren in de bars pagina
       res.render("discover", {
-        name: req.user.name,
+        name: req.name,
         title: "discover",
         bars,
         layout: "./layouts/discover_layout",

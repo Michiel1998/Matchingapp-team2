@@ -1,0 +1,116 @@
+@import "variables";
+
+html {
+   height: 100%;
+}
+
+.bodyStandard {
+   background-color: $beer-light;
+}
+
+
+.mainCocktails {
+   padding: 1rem 2.5rem;
+
+   display: flex;
+   flex-direction: column;
+
+   gap: 1rem;
+
+   /* Opener */
+   section:nth-of-type(1) {
+      display: flex;
+
+      flex-direction: column;
+   
+      color: $body-text-color;
+   
+      text-align: center;
+   }
+
+   /* Kaart cocktail */
+   section:nth-of-type(2) {
+      display: flex;
+      flex-direction: column;
+   
+      justify-content: center;
+      align-items: center;
+   
+      gap: 2rem;
+
+      article {
+         display: flex;
+         flex-direction: column;
+      
+         align-items: center;
+      
+         width: 100%;
+         height: 22rem;
+      
+         border: 0.1rem solid $border-color-brown;
+         border-radius: 0.75rem;
+      
+         color: $white;
+         background-color: $beer-secondary;
+
+         figure {
+            position: relative;
+
+            width: 100%;
+            height: 15rem;
+         
+            border-radius: 0 0 0.75rem 0.75rem;
+         
+            background-color: $grey-mid;
+
+            img {
+               padding: 0;
+               margin: 0;
+            
+               position: absolute;
+            }
+         }
+
+         article {
+            width: 100%;
+            height: 40%;
+         
+            display: flex;
+            flex-direction: column;
+         
+            justify-content: center;
+            align-items: center;
+         
+            gap: 1rem;
+
+            h3 {
+               padding: 0;
+               margin: 0;
+            
+               font-size: 1.5rem;
+               font-weight: 300;
+            }
+
+            h4 {
+               padding: 0;
+               margin: 0;
+            
+               font-size: 0.75rem;
+               font-weight: 300;
+            }
+         }
+      }
+
+      button {
+         padding: 1rem 2rem;
+
+         border: none;
+         border-radius: 0.5rem;
+         outline: none;
+      
+         color: $white;
+         background-color: $primary-button-color;
+      }
+   }
+
+}

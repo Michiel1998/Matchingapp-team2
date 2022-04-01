@@ -1,0 +1,71 @@
+@import "variables";
+
+.secondary_header {
+    z-index: 99;
+
+    width: 100%;
+    height: 6rem;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+
+
+    article {
+        z-index: 99;
+    }
+
+
+    h1 {
+        padding: 0;
+        margin: 0;
+    
+        margin-top: -0.5rem;
+    
+        font-size: 33px;
+    }
+
+
+    p {
+        padding: 0;
+        margin: 0;
+    
+        font-size: 8.8px;
+    }
+
+
+    img {
+        position: absolute;
+
+        top: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

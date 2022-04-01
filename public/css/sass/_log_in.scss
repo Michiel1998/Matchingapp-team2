@@ -1,0 +1,109 @@
+@import "variables";
+
+html {
+   height: 100%;
+}
+
+body {
+   background-color: $beer-light;
+}
+
+
+.logInWrapper{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+
+   .logIn {
+      padding: 4rem 1.5rem 0 1.5rem;
+   
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+   
+      h2 {
+         margin-bottom: 2rem;
+   
+         font-family: $font;
+         font-weight: 400;
+      
+         color: $body-text-color;
+      }
+   
+      form {
+         label {
+            padding: 0;
+            margin: 1rem 0 0.5rem 0;
+         
+            font-family: $font;
+         
+            color: $body-text-color;
+         }
+      
+         input[type="email"], 
+         input[type="password"], 
+         input[type="text"] {
+            height: 2.5rem;
+      
+            font-family: $font;
+            font-weight: 500;
+         
+            border: 0.15rem solid $border-color-brown;
+            border-radius: 0.5rem;
+         
+            color: $body-text-color;
+            background-color: $beer-foam;
+         }
+      
+         input[type="submit"] {
+            font-size: 1rem;
+      
+            padding: 1rem 4rem;
+            margin-top: 8rem;
+         
+            align-self: center;
+         
+            border: none;
+            border-radius: 0.5rem;
+         
+            color: $white;
+            background-color: $primary-button-color;
+         }
+      
+         span {
+            margin-top: 1rem;
+      
+            font-family: $font;
+            font-size: 0.95rem; 
+         
+            color: $body-text-color;
+         }
+      
+         /* Wachtwoord vergeten */
+         span:first-of-type {
+            font-weight: 500;
+      
+            align-self: flex-end;
+         }
+      
+         /* Nog geen account */
+         span:last-of-type {
+            font-weight: 400;
+      
+            align-self: center;
+      
+            /* Nog geen account link */
+            a {
+               font-weight: 500;
+      
+               color: $body-text-color;
+            }
+         }
+      }
+   }
+}
+
+
+
+
+
