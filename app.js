@@ -224,7 +224,7 @@ app.get("/discover", async (req, res) => {
     getBars().then((bars) => {
       // 2. Toon alle barren in de bars pagina
       res.render("discover", {
-        name: req.user.name,
+        name: req?.user?.name || 'unknown',
         title: "discover",
         bars,
         layout: "./layouts/discover_layout",
@@ -300,8 +300,11 @@ app.post("/favorites/delete",  async (req, res) => {
   console.log('hey hij doet het tot hier')
   let test = toId(req.body.barID);
 
+  console.log(req.body)
+
   // database actie zodat bar uit favorieten gaat
-  await LikedBars.deleteOne({ _id: test });
+ const result = await LikedBars.deleteOne({ _id: test }); 
+ console.log(result)
 
   // database actie om de nieuwe lijst met favorieten
   try {

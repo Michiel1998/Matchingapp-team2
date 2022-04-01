@@ -5,7 +5,6 @@ const cssBundle = () =>
 src('public/css/*.css')
 
 
-
 .pipe(concat('styles.css'))
 .pipe(dest('dist/css'));
 
