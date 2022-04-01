@@ -1,6 +1,12 @@
 
    
-   
+
+
+
+
+
+
+
 let newRandomCocktail = document.querySelector(".generateCocktail");
 
 async function getRandomCocktail() {
@@ -11,7 +17,11 @@ async function getRandomCocktail() {
 
 //insert random cocktail in text field
 function showCocktail(cocktail) {
+  let cocktailThumbnail = document.querySelector(".cocktailThumbnail");
   let cocktailTextField = document.querySelector(".randomCocktail");
+
+  let cocktailImage = cocktail.drinks[0].strDrinkThumb;
+  cocktailThumbnail.src = cocktailImage
 
   let cocktailName = cocktail.drinks[0].strDrink;
   cocktailTextField.innerHTML = cocktailName

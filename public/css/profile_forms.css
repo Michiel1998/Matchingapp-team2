@@ -2,6 +2,11 @@
 
 
 
+body {
+    background-color: var(--beer-light);
+}
+
+
 
 
 h1 {
@@ -19,17 +24,17 @@ h2 {
 
 h3 {
     font-family: var(--font);
-    font-size: 16px;
+    font-size: 1rem;
 
     font-weight: 400;
 }
 
 h4 {
     font-family: var(--font);
-    font-size: 15px;
+    font-size: 1rem;
     font-weight: 400;
 
-    color: #B4B4B4;
+    color: var(--beer);
 }
 
 p {
@@ -37,6 +42,8 @@ p {
     font-size: var(--body-font-size);
 
     line-height: var(--body-line-height);
+
+    color: var(--beer);
 }
 
 a {
@@ -156,7 +163,7 @@ main section article h3 {
 main section article p {
     font-size: 14px;
 
-    color: #6F6F6F;
+    color: var(--beer);
     margin-bottom: 0.5rem;
 }
 
@@ -188,10 +195,10 @@ main section select {
     width: 100%;
 
     outline: none;
-    border: #DBDBDB 1px solid;
+    border: var(--border-color) 1px solid;
     border-radius: 15px;
 
-    font-size: 16px;
+    font-size: 1rem;
     font-family: poppins;
 
     color: var(--primary-text-color);
@@ -261,8 +268,10 @@ main form input {
 
     font-family: var(--font);
 
-    border: none;
-    border-bottom: 0.1rem solid var(--border-color);
+    border: 0.1rem solid var(--border-color);
+    border-radius: 0.4rem;
+
+    background-color: transparent;
 }
 
 main form input[type=submit] {
@@ -273,7 +282,7 @@ main form input[type=submit] {
     border-radius: 0.75rem;
 
     color: var(--white);
-    background-color: var(--black);
+    background-color: var(--primary-button-color);
 }
 
 
