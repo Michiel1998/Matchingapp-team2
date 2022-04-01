@@ -11,6 +11,8 @@ const toId = mongoose.Types.ObjectId;
 
 const app = express();
 
+let port = process.env.PORT;
+
 //Passport configuratie
 require("./config/passport")(passport);
 
