@@ -21,10 +21,9 @@
    
       <% likedBars.forEach(likedBar => { %>
            
-      <form method="post" action="/favorites/delete">
+      <form method="post" action="/discover/<%= likedBar._id %>">
          <article>
-
-            <input type="hidden" name="" value="<%= likedBar._id %>">
+      
             <button type="submit">❤️</button>
       
             <figure> 
