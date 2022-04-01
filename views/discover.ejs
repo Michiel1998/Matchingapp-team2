@@ -35,7 +35,7 @@
             <button type="submit"><img src="/images/filled_heart.svg" alt="like"></button>
       
             <figure> 
-               <img src="<%= bar.imgUrl %>" alt="">
+               <img src="/images/sneaker_1.png" data-src="<%= bar.imgUrl %>" alt="" class="lazy">
             </figure>
 
             <article>
@@ -62,6 +62,7 @@
    
 </main>
 
-
    
 <%- include('partials/navigation.ejs') %>
+
+<script src="js/lazily.js"></script>
