@@ -7,11 +7,12 @@ Ook kan je kroegen toevoegen aan je favorieten, waar je dan mooi in één klap k
 
 Ben je in je kroeg, zin in een cocktail, maar weet je niet wat je wilt bestellen? Probeer onze Random Cocktail generator eens! Deze generator kiest een willekeurige cocktail uit van onze database, inclusief een afbeelding en naam van de cocktail, en wat er precies in zit!
 
+## Bekijk de App! 
+https://huisgenoot-matching.herokuapp.com/
+
 
 <img width="310"  alt="Screenshot 2022-04-02 at 17 06 45" src="https://user-images.githubusercontent.com/47413780/161389368-559ccc51-b8a9-46f7-908d-f7d3e4f18aa4.png">
 
-#
-https://huisgenoot-matching.herokuapp.com/
 
 ## Installatie 📎
 Om het project te installeren moet je de volgende stappen doorvoeren. Maak voordat je begint een map aan en werk hier in. Het is niet aangeraden om dit zonder een map te doen aangezien het dan allemaal bestanden los in een andere map stopt.
