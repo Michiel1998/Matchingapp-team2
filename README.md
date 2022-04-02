@@ -24,3 +24,10 @@ Installeer de NPM Packages. Door deze command te gebruiken installeert de termin
 Start de server op. Via deze command kan de gebruiker de server lokaal opstarten voor bijvoorbeeld test purposes of kijken hoe het project in zijn werk gaat.
 * npm run start
 
+## Contributers
+| Teamlid | Studentnummer |
+|---|---:|
+| Danian Marengo | 500855324 |
+| Laiba Choudhry | 500842367 |
+| Michiel Schipper | 500855441 |
+| Yara Prins | 500769852 |
