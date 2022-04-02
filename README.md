@@ -1,5 +1,12 @@
 # Kroeg! - Team 2 Matching App
 
+## Leuk dat je er bent!
+Ons concept is "Kroeg!" een kroeg en café zoeker voor en door studenten in Amsterdam. Bij Kroeg! kan je opzoek naar jouw perfecte kroeg-match en zie je op een mooie en overzichtelijke plek hoe ze heten, waar ze zitten, wat de reviews zijn en kan je contact met ze opnemen.
+
+Ook kan je kroegen toevoegen aan je favorieten, waar je dan mooi in één klap kan zien welke je precies leuk vond!
+
+Ben je in je kroeg, zin in een cocktail, maar weet je niet wat je wilt bestellen? Probeer onze Random Cocktail generator eens! Deze generator kiest een willekeurige cocktail uit van onze database, inclusief een afbeelding en naam van de cocktail, en wat er precies in zit!
+
 <p align="center">
   <img width="300" height="150" src="https://user-images.githubusercontent.com/27287809/160905491-753c0ffb-1a07-4eff-8670-b5b6953de374.svg">
 </p>
