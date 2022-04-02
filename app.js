@@ -118,31 +118,12 @@ app.post("/sign_up", (req, res) => {
   const { username, email, password, password_2 } = req.body;
   let errors = [];
 
-  //    if(!username || !email || !password || !password_2 ) {
-  //        errors.push({ msg: "Please fill in all fields" });
-  //    }
-
-  //    if(password !== password_2 ) {
-  //        errors.push({ msg: "Passwords do not match" });
-  //    }
-
-  //    if(password.length < 6 ) {
-  //        errors.push({ msg: "Password should be at least 6 characters " });
-  //    }
-
-  //    if(errors.length > 0) {
-  //        res.render("sign_up", {
-
-  //        });
-
-  //    } else {
-  //        res.send("pass");
-  //    }
-
+  
+  // Aanmaken van ingevuld emailadres
   User.findOne({ email }, (err, user) => {
     if (user) {
       console.log("email in gebruik");
-      // errors.push({ msg: "Email is al gerigistreerd" });
+      // Gebruiker naar registreren sturen als emailadres in gebruik is
       res.render("sign_up", {
         title: "sign_up",
         layout: "./layouts/profile_forms_country",
@@ -153,6 +134,7 @@ app.post("/sign_up", (req, res) => {
         password_2,
       });
     } else {
+      // Gebruiker registreren in database
       const nieuwe_gebruiker = new User({
         name: username,
         email,
@@ -162,14 +144,15 @@ app.post("/sign_up", (req, res) => {
 
       console.log(nieuwe_gebruiker);
 
+      // Ingevoerde wachtwoord van gebruiker versleutelen
       bcrypt.genSalt(10, (err, salt) =>
         bcrypt.hash(nieuwe_gebruiker.password, salt, (err, hash) => {
           if (err) throw err;
 
-          //Wachtwoord daadwerkelijk aanmaken
+          // Wachtwoord daadwerkelijk aanmaken
           nieuwe_gebruiker.password = hash;
 
-          //gebruiker opslaan
+          // gebruiker opslaan
           nieuwe_gebruiker
             .save()
             .then((user) => {
