@@ -7,6 +7,9 @@ Ook kan je kroegen toevoegen aan je favorieten, waar je dan mooi in één klap k
 
 Ben je in je kroeg, zin in een cocktail, maar weet je niet wat je wilt bestellen? Probeer onze Random Cocktail generator eens! Deze generator kiest een willekeurige cocktail uit van onze database, inclusief een afbeelding en naam van de cocktail, en wat er precies in zit!
 
+
+<img width="310"  alt="Screenshot 2022-04-02 at 17 06 45" src="https://user-images.githubusercontent.com/47413780/161389368-559ccc51-b8a9-46f7-908d-f7d3e4f18aa4.png">
+
 <p align="center">
   <img width="300" height="150" src="https://user-images.githubusercontent.com/27287809/160905491-753c0ffb-1a07-4eff-8670-b5b6953de374.svg">
 </p>
