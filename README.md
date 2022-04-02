@@ -10,10 +10,6 @@ Ben je in je kroeg, zin in een cocktail, maar weet je niet wat je wilt bestellen
 
 <img width="310"  alt="Screenshot 2022-04-02 at 17 06 45" src="https://user-images.githubusercontent.com/47413780/161389368-559ccc51-b8a9-46f7-908d-f7d3e4f18aa4.png">
 
-<p align="center">
-  <img width="300" height="150" src="https://user-images.githubusercontent.com/27287809/160905491-753c0ffb-1a07-4eff-8670-b5b6953de374.svg">
-</p>
-
 #
 https://huisgenoot-matching.herokuapp.com/
 
