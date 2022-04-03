@@ -1,7 +1,4 @@
 
-
-
-
 <%- include('partials/header.ejs') %>
 
 <header>
@@ -35,7 +32,7 @@
             <button type="submit"><img src="/images/filled_heart.svg" alt="like"></button>
       
             <figure> 
-               <img src="<%= bar.imgUrl %>" alt="">
+               <img src="/images/lazily_placeholder.png" data-src="<%= bar.imgUrl %>" alt="" class="lazy">
             </figure>
 
             <article>
@@ -62,6 +59,7 @@
    
 </main>
 
-
    
 <%- include('partials/navigation.ejs') %>
+
+<script src="js/lazily.js"></script>

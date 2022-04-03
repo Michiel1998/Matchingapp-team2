@@ -90,11 +90,19 @@ main section form > article {
 }
 
 main section article button {
+   z-index: 99;
+
    position: absolute;
 
    top: 0.5rem;
    right: 0.5rem;
 }
+
+main section article button img {
+   width: 100%;
+   height: 100%;
+}
+
 
 /* Thumbnail kroeg */
 main section article figure {
