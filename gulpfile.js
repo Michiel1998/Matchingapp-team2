@@ -7,11 +7,11 @@ gulp.task('minify-css', () => {
     .pipe(gulp.dest('dist'));
 });
  
-/* gulp.task('minify-css', () => {
+gulp.task('minify-css', () => {
   return gulp.src('/public/css/sass')
     .pipe(cleanCSS({debug: true}, (details) => {
       console.log(`${details.name}: ${details.stats.originalSize}`);
       console.log(`${details.name}: ${details.stats.minifiedSize}`);
     }))
   .pipe(gulp.dest('dist'));
-}); */
+}); 
