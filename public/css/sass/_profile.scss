@@ -1,0 +1,191 @@
+@import "variables";
+
+
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+.profile,
+.mainProfile {
+    h1, h2, h3, h4, p, a {
+        font-family: $font;
+    }
+
+    h1 {
+        padding: 0;
+        margin: 0;
+        margin-bottom: 0.6em;
+        font-size: $h1-font-size;
+    }
+    
+    h2 {
+        padding: 0;
+        margin: 0;
+        font-size: $h2-font-size;
+        font-weight: 500;
+    }
+    
+    h3 {
+        padding: 0;
+        margin: 0;
+        font-size: 16px;
+        font-weight: 400;
+        color: $grey-dark;
+    }
+    
+    h4 {
+        padding: 0;
+        margin: 0;
+        font-size: 15px;
+        font-weight: 400;
+        color: $grey-mid;
+    }
+    
+    p {
+        padding: 0;
+        margin: 0;
+        font-size: $body-font-size;
+        line-height: $body-line-height;
+    }
+    
+    a {
+        padding: 0;
+        margin: 0;
+        font-size: $primary-button-font-size;
+        text-decoration: none;
+    }
+    
+    
+    .profile {
+        padding: 2rem;
+
+        article {
+            position: relative;
+        
+            display: flex;
+            flex-direction: row;
+        
+            justify-content: space-between;
+            align-items: center;
+
+            figure {
+                overflow: hidden;
+    
+                width: 4rem;
+                height: 4rem;
+            
+                border-radius: 1em;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    
+    
+    
+    .mainProfile {
+        section {
+            margin: 0;
+            padding: 0 2rem 0 2rem;
+        
+            display: flex;
+            flex-direction: column;
+            
+            justify-content: center;
+            align-items: center;
+
+            h3 {
+                color: $primary-text-color;
+            }
+
+            h4 {
+                margin-bottom: 2rem;
+                align-self: flex-start;
+            }
+
+            figure {
+                margin: 2rem 0 2rem 0;
+                padding: 0;
+                width: 10rem;
+                height: 10rem;
+                border-radius: 1rem;
+
+                img {
+                    margin: 0;
+                    padding: 0;
+                    width: 100%;
+                }
+            }
+
+            article {
+                margin-bottom: 1.5rem;
+            
+                width: 100%;
+            
+                border-bottom: 0.1rem solid $border-color-brown;
+
+                a {
+                    margin-bottom: 1rem;
+        
+                    display: flex;
+                    justify-content: space-between;
+                
+                    align-items: center;
+                }
+
+                img {
+                    width: 1rem;
+                    height: 15px;
+                }
+
+                h3 {
+                    font-size: 18px;  
+                }
+            }
+
+            select {
+                width: 100%;
+            }
+        }        
+        
+        
+        form {
+            margin: 0;
+            padding: 2rem;
+        
+            display: flex;
+            flex-direction: column;
+
+            label {
+                margin-top: 1rem;
+        
+                font-family: $font;
+            }
+
+            input {
+                padding: 1rem 0 1rem 0;
+                margin-bottom: 1rem;
+            
+                font-family: $font;
+            
+                border: none;
+                border-bottom: 1px solid red;
+            }
+
+            input[type=submit] {
+                margin-top: 20rem;
+                padding: 1.5rem;
+            
+                border: none;
+                border-radius: 0.75rem;
+            
+                color: $white;
+                background-color: $black;
+            }
+        }
+
+    } 
+}
+

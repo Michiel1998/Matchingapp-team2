@@ -1,19 +1,18 @@
-const { src, dest } = require('gulp');
+const gulp = require('gulp');
 const concat = require('gulp-concat');
-
-const cssBundle = () =>
-src('public/css/*.css')
-
-
-.pipe(concat('styles.css'))
-.pipe(dest('dist/css'));
-
-exports.cssBundle = cssBundle;
-
-
-function defaultTask(cb) {
-  // place code for your default task here
-  cb();
-}
-
-exports.default = defaultTask
+const cleanCSS = require('gulp-clean-css');
+ 
+gulp.task('minify-css', () => {
+  return gulp.src('/public/css/sass')
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(gulp.dest('dist'));
+});
+ 
+gulp.task('minify-css', () => {
+  return gulp.src('/public/css/sass')
+    .pipe(cleanCSS({debug: true}, (details) => {
+      console.log(`${details.name}: ${details.stats.originalSize}`);
+      console.log(`${details.name}: ${details.stats.minifiedSize}`);
+    }))
+  .pipe(gulp.dest('dist'));
+});
