@@ -201,6 +201,8 @@ app.get("/profile", (req, res) => {
   res.render("profile", { title: "profile", layout: "./layouts/include_nav" });
 });
 
+//hier begint de functie liken >>>>>>>>
+
 app.get("/discover", async (req, res) => {
   try {
     // 1. Haal alle barren uit de database
